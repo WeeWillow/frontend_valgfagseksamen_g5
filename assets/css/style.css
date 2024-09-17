@@ -7,15 +7,18 @@
   --salmon: #ECD1CA;
   --salmon50: hsla(12, 47%, 86%, 50%);
   --salmonDark: #D09A8E;
-  --turkis: #139DA7;
-  --turkis50: hsla(184, 80%, 36%, 50%);
-  --tekst: #090909;
-  --hvid: #F9F9F9;
+  --teal: rgb(18, 156, 166);
+  --teal50: hsla(184, 80%, 36%, 50%);
+  --text: #090909;
+  --white: #F9F9F9;
   --accent: #FED54F;
 
   /* Margins */
   --section: 2.5rem;
   --textSpace: 1rem;
+
+  /* andet */
+  --btnShadow: 0px 2px 2px 0px rgba(0,0,0,0.35);
 }
 
 /* Universal stylings */
@@ -50,7 +53,8 @@ h3 {
   font-size: 1.8rem;
 }
 
-p {
+p,
+a {
   font-family: 'open sans', sans-serif;
   line-height: 1.5rem;
 }
@@ -68,5 +72,98 @@ main {
 }
 
 section {
+  margin: var(--section) 0;
   grid-column: 2/-2;
 }
+
+.container {
+  display: flex;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.flexClm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+nav {
+  img {
+    height: 3rem;
+  }
+
+  margin: 1rem 5vw 0 5vw;
+  justify-content: space-between;
+}
+
+.navPoints {
+  a{
+    margin: 0 .5rem;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 1rem;
+  }
+  .activePage {
+    text-underline-offset: 8px;
+    text-decoration: underline 2px var(--teal);
+  }
+}
+
+.btnYellow {
+  background: var(--accent);
+  height: 1.5rem;
+  width: fit-content;
+  padding: .6rem 1.2rem;
+  text-align: center;
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: var(--btnShadow);
+}
+
+.btnBlack {
+  background: var(--text);
+  height: 2.8rem;
+  width: 14rem;
+  padding: .6rem 1rem;
+
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: var(--btnShadow);
+}
+
+.containerDetails {
+  i {
+    color: var(--teal);
+    margin-right: 1rem;
+  }
+}
+
+footer {
+  padding: 1rem 0;
+  margin: 0 5vw 0 5vw;
+}
+.soMe {
+  a {
+    background: var(--text);
+    padding: .4rem .6rem;
+    border-radius: 3px;
+
+    i {
+      color: var(--teal);
+      font-size: 1.6rem;
+    }
+  }
+
+  display: flex;
+  gap: .2rem;
+  justify-content: space-evenly;
+}
+
+
