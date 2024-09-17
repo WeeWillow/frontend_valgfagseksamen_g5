@@ -1,0 +1,24 @@
+header {
+  position: relative;
+  width: 100vw;
+  height: 40vh;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: -30rem;
+    left: 0;
+    filter: brightness(40%);
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+  }
+}
