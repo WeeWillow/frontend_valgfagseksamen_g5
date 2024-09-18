@@ -14,7 +14,7 @@
   --accent: #fed54f;
 
   /* Margins */
-  --section: 2.5rem;
+  --section: 3rem;
   --textSpace: 1rem;
 
   /* andet */
@@ -69,6 +69,7 @@ main {
   display: grid;
   grid-template-columns: 10vw repeat(4, 1fr) 10vw;
   grid-template-rows: auto;
+  overflow: hidden;
 }
 
 .sectionWrapper {
@@ -238,6 +239,10 @@ footer {
   }
 }
 
+.fa-chevron-down {
+  color: var(--teal);
+}
+
 .fullHeader {
   position: relative;
   width: 100vw;
@@ -273,7 +278,7 @@ footer {
 }
 /* adoption start */
 #adoptionHeader {
-  height: 55vh;
+  height: 60vh;
   justify-content: space-between;
 }
 
@@ -302,6 +307,17 @@ footer {
     border: 2px solid var(--teal);
     border-radius: 50px;
     font-weight: 500;
+
+    &:hover {
+      transform: scale(1.05);
+      border-color: var(--salmon);
+    }
+  }
+  .active {
+    box-shadow: inset var(--btnShadow);
+    background: var(--salmon);
+    border: none;
+    text-transform: uppercase;
   }
 }
 
@@ -311,7 +327,7 @@ footer {
   justify-content: space-between;
 
   label {
-    font-family: 'open sans', sans-serif;
+    font-family: "open sans", sans-serif;
     margin-right: 8%;
   }
   input[type="radio"] {
@@ -324,10 +340,10 @@ footer {
     border-radius: 50%;
     position: relative; /* Positioning context for the dot */
   }
-  
+
   /* Custom dot*/
   input[type="radio"]:checked::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -338,7 +354,7 @@ footer {
     transform: translate(-50%, -50%);
     box-shadow: var(--btnShadow);
   }
-  
+
   /* Change border and background for the checked state */
   input[type="radio"]:checked {
     border: 2px solid var(--salmon);
@@ -382,6 +398,26 @@ footer {
   display: grid;
   grid: center;
 }
+
+.paragraphLenght {
+  h2 {
+    text-wrap: balance;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin: 1rem 0;
+    width: 70ch;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+}
+
 .animalGallery {
   display: grid;
   gap: 1rem;
@@ -408,11 +444,11 @@ footer {
 .animalCard {
   margin: 0.2rem 0;
   background: var(--salmon50);
-  height: 50vh;
-  width: 20vw;
+  height: 45vh;
+  width: 18vw;
   box-shadow: var(--btnShadow);
   border-radius: 5px;
-  overflow: hidden;
+  overflow: hidden; /* hide sharp corners from images*/
 
   img {
     margin: 0;
@@ -502,6 +538,10 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
+}
+
+.introText {
+  width: 60ch;
 }
 
 .holdetCard {
