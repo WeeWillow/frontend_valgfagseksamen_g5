@@ -4,7 +4,7 @@ const footerElement = document.querySelector("footer");
 const navContent = `
 <a href="./index.html" ><img src="./assets/img/LOGO.svg" alt="Sejr og Davidsens logo"></a>
         <div class="navPoints">
-            <a href="./dyrepension">Dyrepension <i class="fa-solid fa-chevron-down" style="color: #129ca6;"></i></a>
+            <a href="/dyrepension">Dyrepension <i class="fa-solid fa-chevron-down" style="color: #129ca6;"></i></a>
             <a href="./adoption">Adoption <i class="fa-solid fa-chevron-down" style="color: #129ca6;"></i></a>
             <a href="./traening">Træning <i class="fa-solid fa-chevron-down" style="color: #129ca6;"></i></a>
             <a href="./omOs">Sejr og Davidsen <i class="fa-solid fa-chevron-down" style="color: #129ca6;"></i></a>
