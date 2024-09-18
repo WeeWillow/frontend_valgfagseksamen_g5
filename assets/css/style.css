@@ -114,6 +114,7 @@ nav {
   }
 }
 
+/* buttons */
 .btnYellow {
   background: var(--accent);
   height: 1.5rem;
@@ -136,6 +137,35 @@ nav {
   text-decoration: none;
   border-radius: 5px;
   box-shadow: var(--btnShadow);
+}
+
+.btnWhite {
+  background: var(--white);
+  height: 2.8rem;
+  width: 10rem;
+  text-align: center;
+  padding: 0.6rem 1rem;
+
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: var(--btnShadow);
+  font-weight: bold;
+}
+
+.btnPink {
+  background: var(--salmon);
+  height: 2.8rem;
+  width: fit-content;
+  text-align: center;
+  padding: 0.6rem 1rem;
+
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: var(--btnShadow);
+  font-weight: bold;
+  margin: 1.5rem auto;
 }
 
 .containerDetails {
@@ -171,7 +201,6 @@ footer {
   width: 100vw;
   height: 40vh;
   overflow: hidden;
-
   img {
     position: relative;
     width: 100%;
@@ -190,3 +219,86 @@ footer {
     color: var(--white);
   }
 }
+
+.fullHeader {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden;
+  img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+
+  .forsideHero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text);
+  }
+
+  .forsideText {
+    width: 60ch;
+    p {
+      text-align: center;
+    }
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+/* forside start */
+.mission {
+  width: 70ch;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.forsideKnap {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+/* forside slut */
+
+/*Mød holdet start*/
+.introImg img {
+  height: auto;
+  width: 400px;
+}
+
+.holdetImg img {
+  height: 250px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.intro {
+  display: flex;
+}
+
+.holdet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.holdetCard {
+  width: calc(100% / 2 - 30px);
+  border: 2px solid var(--teal);
+  padding: 1rem;
+}
+
+.holdetContainer {
+  display: flex;
+  gap: 10px;
+}
+/*Mød holdet slut*/
