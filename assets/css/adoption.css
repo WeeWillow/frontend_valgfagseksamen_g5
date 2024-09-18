@@ -1,0 +1,67 @@
+.narrowHeader {
+  position: relative;
+  width: 100vw;
+  height: 40vh;
+  overflow: hidden;
+
+  img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    filter: brightness(50%);
+  }
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+  }
+}
+
+#adoptionImg {
+  height: 600px;
+  width: auto;
+  border-radius: 5px;
+}
+
+.blueWrapper {
+  background: var(--teal50);
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+.animalCard {
+  h4 {
+    font-family: "open sans", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  img {
+    height: 220px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+  }
+  .animalCardDetails {
+    p {
+      font-weight: 200;
+    }
+  }
+
+  .animalCardTraits {
+  }
+
+  .trait {
+    font-family: "open sans", sans-serif;
+    font-weight: 100;
+    i {
+      color: var(--salmonDark);
+    }
+  }
+}
