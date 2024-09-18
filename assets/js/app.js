@@ -61,3 +61,22 @@ const footerContent = `
         </div>
 `;
 footerElement.innerHTML = footerContent;
+
+
+// filter
+// choose cat or dog
+function selectAnimal(animal) {
+  const dogBtn = document.getElementById('dogBtn');
+  const catBtn = document.getElementById('catBtn');
+
+  if (animal === 'dog') {
+    dogBtn.classList.add('active');
+    catBtn.classList.remove('active');
+  } else if (animal === 'cat') {
+    catBtn.classList.add('active');
+    dogBtn.classList.remove('active');
+  }
+
+  // Your filtering logic can go here
+  console.log(`Filter applied for: ${animal}`);
+}

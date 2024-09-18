@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <!-- META -->
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -9,19 +10,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- META END -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/adoption.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="./assets/js/app.js" defer></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <nav class="flex">
     </nav>
     <main>
+      <header id="adoptionHeader" class="sectionWrapper flex">
         <section>
+          <h2>Adoptioner</h2>
+          <p>Find din nye firbenede ven</p>
+          <div class="adoptFilterContainer">
+            <div class="filterSelects flex">
+              <button type="button" id="dogButton" onclick="selectAnimal('dog')">Hund</button>
+              <button type="button" id="catButton" onclick="selectAnimal('cat')">Kat</button>
+              <button type="button">Aktivitetsniveau <i class="fa-solid fa-chevron-down" style="color: #129ca6;"></i></button>
+              <button type="button">Køn <i class="fa-solid fa-chevron-down" style="color: #129ca6;"></i></button>
+            </div>
+            <div class="filterRadios">
+              <input type="radio" id="childFriendly" name="filter" value="børnevenlig">
+              <label for="childFriendly">Børnevenlig</label>
+
+              <input type="radio" id="familyFriendly" name="filter" value="familievenlig">
+              <label for="familyFriendly">Familievenlig</label>
+
+              <input type="radio" id="all" name="filter" value="alle">
+              <label for="all">Alle</label>
+            </div>
+            <button class="btnBlue" type="submit">søg efter hund</button>
+          </div>
         </section>
+        <section class="adoptionHeaderImg">
+          <img id="hund" class="selectedType filterAnimal" src="./assets/img/hundAdoptionHeader.png" alt="liggende schæfer">
+          <img id="kat" class="nonselectedType filterAnimal" src="./assets/img/katAdoptionHeader.png" alt="siddende kat">
+        </section>
+      </header>
+      <section class="sectionWrapper">
+        <h2>Hunde til adoption</h2>
+        <section class="animalGallery">
+          <div class="animalCard">
+            <img src="./assets/img/finskLapphund.jpg" alt="finsk lapphund valp">
+            <div class="animalContainer">
+              <div class="animalCardDetails">
+                <h4>Basse</h4>
+                <p>Finsk Lapphund</p>
+              </div>
+              <div class="animalCardTraits">
+                <div class="trait"><i class="fa-solid fa-cake-candles"></i> 3 Måneder</div>
+                <div class="trait"><i class="fa-solid fa-dog"></i> Mellem</div>
+                <div class="trait"><i class="fa-solid fa-venus-mars"></i> Han</div>
+                <div class="trait"><i class="fa-solid fa-baby"></i> Ukendt</div>
+              </div>
+            </div>
+          </div>
+          <div class="animalCard">
+            <img src="./assets/img/finskLapphund.jpg" alt="finsk lapphund valp">
+            <div class="animalContainer">
+              <div class="animalCardDetails">
+                <h4>Basse</h4>
+                <p>Finsk Lapphund</p>
+              </div>
+              <div class="animalCardTraits">
+                <div class="trait"><i class="fa-solid fa-cake-candles"></i> 3 Måneder</div>
+                <div class="trait"><i class="fa-solid fa-dog"></i> Mellem</div>
+                <div class="trait"><i class="fa-solid fa-venus-mars"></i> Han</div>
+                <div class="trait"><i class="fa-solid fa-baby"></i> Ukendt</div>
+              </div>
+            </div>
+          </div>
+          <div class="animalCard">
+            <img src="./assets/img/finskLapphund.jpg" alt="finsk lapphund valp">
+            <div class="animalContainer">
+              <div class="animalCardDetails">
+                <h4>Basse</h4>
+                <p>Finsk Lapphund</p>
+              </div>
+              <div class="animalCardTraits">
+                <div class="trait"><i class="fa-solid fa-cake-candles"></i> 3 Måneder</div>
+                <div class="trait"><i class="fa-solid fa-dog"></i> Mellem</div>
+                <div class="trait"><i class="fa-solid fa-venus-mars"></i> Han</div>
+                <div class="trait"><i class="fa-solid fa-baby"></i> Ukendt</div>
+              </div>
+            </div>
+          </div>
+          <div class="animalCard">
+            <img src="./assets/img/finskLapphund.jpg" alt="finsk lapphund valp">
+            <div class="animalContainer">
+              <div class="animalCardDetails">
+                <h4>Basse</h4>
+                <p>Finsk Lapphund</p>
+              </div>
+              <div class="animalCardTraits">
+                <div class="trait"><i class="fa-solid fa-cake-candles"></i> 3 Måneder</div>
+                <div class="trait"><i class="fa-solid fa-dog"></i> Mellem</div>
+                <div class="trait"><i class="fa-solid fa-venus-mars"></i> Han</div>
+                <div class="trait"><i class="fa-solid fa-baby"></i> Ukendt</div>
+              </div>
+            </div>
+          </div>
+          <div class="animalCard">
+            <img src="./assets/img/finskLapphund.jpg" alt="finsk lapphund valp">
+            <div class="animalContainer">
+              <div class="animalCardDetails">
+                <h4>Basse</h4>
+                <p>Finsk Lapphund</p>
+              </div>
+              <div class="animalCardTraits">
+                <div class="trait"><i class="fa-solid fa-cake-candles"></i> 3 Måneder</div>
+                <div class="trait"><i class="fa-solid fa-dog"></i> Mellem</div>
+                <div class="trait"><i class="fa-solid fa-venus-mars"></i> Han</div>
+                <div class="trait"><i class="fa-solid fa-baby"></i> Ukendt</div>
+              </div>
+            </div>
+          </div>
+          <div class="animalCard">
+            <img src="./assets/img/finskLapphund.jpg" alt="finsk lapphund valp">
+            <div class="animalContainer">
+              <div class="animalCardDetails">
+                <h4>Basse</h4>
+                <p>Finsk Lapphund</p>
+              </div>
+              <div class="animalCardTraits">
+                <div class="trait"><i class="fa-solid fa-cake-candles"></i> 3 Måneder</div>
+                <div class="trait"><i class="fa-solid fa-dog"></i> Mellem</div>
+                <div class="trait"><i class="fa-solid fa-venus-mars"></i> Han</div>
+                <div class="trait"><i class="fa-solid fa-baby"></i> Ukendt</div>
+              </div>
+            </div>
+          </div>
+          <div class="animalCard">
+            <img src="./assets/img/finskLapphund.jpg" alt="finsk lapphund valp">
+            <div class="animalContainer">
+              <div class="animalCardDetails">
+                <h4>Basse</h4>
+                <p>Finsk Lapphund</p>
+              </div>
+              <div class="animalCardTraits">
+                <div class="trait"><i class="fa-solid fa-cake-candles"></i> 3 Måneder</div>
+                <div class="trait"><i class="fa-solid fa-dog"></i> Mellem</div>
+                <div class="trait"><i class="fa-solid fa-venus-mars"></i> Han</div>
+                <div class="trait"><i class="fa-solid fa-baby"></i> Ukendt</div>
+              </div>
+            </div>
+          </div>
+          <div class="animalCard">
+            <img src="./assets/img/finskLapphund.jpg" alt="finsk lapphund valp">
+            <div class="animalContainer">
+              <div class="animalCardDetails">
+                <h4>Basse</h4>
+                <p>Finsk Lapphund</p>
+              </div>
+              <div class="animalCardTraits">
+                <div class="trait"><i class="fa-solid fa-cake-candles"></i> 3 Måneder</div>
+                <div class="trait"><i class="fa-solid fa-dog"></i> Mellem</div>
+                <div class="trait"><i class="fa-solid fa-venus-mars"></i> Han</div>
+                <div class="trait"><i class="fa-solid fa-baby"></i> Ukendt</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <a id="findDyr" class="btnPink" href="./archive-hund.html">Indlæs flere hunde</a>
+      </section>
     </main>
     <footer class="flex">
     </footer>
-</body>
+  </body>
+
 </html>

@@ -168,6 +168,24 @@ nav {
   margin: 1.5rem auto;
 }
 
+.btnBlue {
+  background: var(--teal);
+  height: 2.8rem;
+  width: 100%;
+  text-align: center;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+
+  color: var(--white);
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  box-shadow: var(--btnShadow);
+  font-weight: 500;
+  margin: 1.5rem auto;
+}
+
 .containerDetails {
   i {
     color: var(--teal);
@@ -254,6 +272,112 @@ footer {
   }
 }
 /* adoption start */
+#adoptionHeader {
+  height: 55vh;
+  justify-content: space-between;
+}
+
+.adoptFilterContainer {
+  width: 30vw;
+}
+
+.filterSelects {
+  margin: 1rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+
+  button {
+    cursor: pointer;
+    background: var(--white);
+    height: 2.8rem;
+    min-width: 45%;
+    width: fit-content;
+    text-align: center;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+
+    color: var(--text);
+    text-decoration: none;
+    border: 2px solid var(--teal);
+    border-radius: 50px;
+    font-weight: 500;
+  }
+}
+
+.filterRadios {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  label {
+    font-family: 'open sans', sans-serif;
+    margin-right: 8%;
+  }
+  input[type="radio"] {
+    cursor: pointer;
+    appearance: none; /* Remove default styling */
+    width: 20px;
+    height: 20px;
+    background-color: var(--white);
+    border: 2px solid var(--teal);
+    border-radius: 50%;
+    position: relative; /* Positioning context for the dot */
+  }
+  
+  /* Custom dot*/
+  input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: var(--white);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: var(--btnShadow);
+  }
+  
+  /* Change border and background for the checked state */
+  input[type="radio"]:checked {
+    border: 2px solid var(--salmon);
+    background-color: var(--salmon); /* Background when checked */
+  }
+}
+
+.adoptionHeaderImg {
+  position: relative;
+
+  .selectedType {
+    z-index: 1;
+  }
+  .nonselectedType {
+    z-index: 0;
+  }
+
+  .filterAnimal {
+    position: absolute;
+    top: -10vh;
+    right: 2vw;
+  }
+
+  #hund {
+    width: 40vw;
+    height: auto;
+    top: -10vh;
+    right: 12vw;
+  }
+
+  #kat {
+    filter: opacity(60%);
+    width: 20vw;
+    height: auto;
+    top: 10vh;
+    right: 5vw;
+  }
+}
+
 #findDyr {
   display: grid;
   grid: center;
@@ -261,7 +385,7 @@ footer {
 .animalGallery {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   margin: 1.5rem 0;
   flex-wrap: wrap;
@@ -282,10 +406,10 @@ footer {
 }
 
 .animalCard {
-  margin: .2rem 0;
+  margin: 0.2rem 0;
   background: var(--salmon50);
-  height: 420px;
-  width: 340px;
+  height: 50vh;
+  width: 20vw;
   box-shadow: var(--btnShadow);
   border-radius: 5px;
   overflow: hidden;
@@ -307,16 +431,16 @@ footer {
   }
 
   .animalCardDetails {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     p {
-      font-size: .9rem;
+      font-size: 0.9rem;
       line-height: 1;
       font-weight: 600;
     }
   }
 
   .animalContainer {
-  padding: 0 .6rem;
+    padding: 0 0.6rem;
   }
 
   .animalCardTraits {
@@ -325,11 +449,11 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 1.2rem 1.5rem;
+    gap: 1.2rem 1vw;
 
     i {
       font-size: 1.5rem;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
   }
 
