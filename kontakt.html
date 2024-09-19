@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <!-- META -->
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -12,15 +13,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="./assets/js/app.js" defer></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <nav class="flex">
     </nav>
     <main>
-        <section>
-        </section>
+      <section class="sectionWrapper">
+        <h1>Kontakt os</h1>
+        <form action="/submit" method="POST" class="contact-form">
+          <div>
+            <label for="name">Navn:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div>
+            <label for="message">Besked:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <div>
+            <button type="submit">Send besked</button>
+          </div>
+        </form>
+
+      </section>
     </main>
     <footer class="flex">
     </footer>
-</body>
+  </body>
+
 </html>

@@ -4,10 +4,10 @@ const footerElement = document.querySelector("footer");
 const navContent = `
 <a href="./index.html" ><img src="./assets/img/LOGO.svg" alt="Sejr og Davidsens logo"></a>
         <div class="navPoints">
-            <a href="/dyrepension">Dyrepension <i class="fa-solid fa-chevron-down"></i></a>
-            <a href="./adoption">Adoption <i class="fa-solid fa-chevron-down"></i></a>
-            <a href="./traening">Træning <i class="fa-solid fa-chevron-down"></i></a>
-            <a href="./omOs">Sejr og Davidsen <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="/dyrepension">Dyrepension</i></a>
+            <a href="./adoption">Adoption</i></a>
+            <a href="./traening">Træning</i></a>
+            <a href="./omOs">Sejr og Davidsen</i></a>
             <a href="./kontakt">Kontakt</a>
             <a href="#" class="btnYellow">Donér</a>
         </div>
@@ -24,7 +24,7 @@ const footerContent = `
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             </div>
-            <a href="#" class="btnYellow">Støt dyrene og donér</a>
+            <a href="#" class="btnYellow btnSupport">Støt dyrene og donér</a>
         </div>
         <div class="container">
             <div class="containerDetails flexClm">
@@ -53,7 +53,7 @@ const footerContent = `
             </ul>
         </div>
         <div class="container">
-            <div class="flexContainer">
+            <div class="flexContainer subscribe">
                 <h2>Hold dig opdateret</h2>
                 <p>Tilmed dig vores nyhedsbrev, og få opdateringer omkring nye dyr, succeshistorier og events.</p>
                 <a href="#" class="btnYellow">Tilmeld nyhedsbrev</a>
