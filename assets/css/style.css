@@ -7,8 +7,8 @@
   --salmon: #ecd1ca;
   --salmon50: hsla(12, 47%, 86%, 50%);
   --salmonDark: #d09a8e;
-  --teal: #129ca6;
-  --teal30: hsla(184, 80%, 36%, 30%);
+  --teal: hsl(184, 80%, 36%);
+  --teal30: #b3dde0;
   --teal50: hsla(184, 80%, 36%, 50%);
   --text: #090909;
   --white: #f9f9f9;
@@ -205,7 +205,7 @@ nav {
     text-decoration: underline 2px var(--teal);
   }
   a {
-    margin: 0 0.5rem;
+    margin: 0 1vw;
     text-decoration: none;
     color: var(--text);
     font-size: 1rem;
@@ -333,9 +333,63 @@ nav {
   background: var(--teal30);
 }
 
+.applyContainer {
+  padding: 1rem;
+  color: var(--teal);
+  border-radius: 5px;
+
+  h2 {
+    font-family: "open sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.applyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 1.5rem 1rem;
+
+  button {
+    border: none;
+    border-radius: 5px;
+    height: 4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.1rem;
+
+    &:nth-of-type(1) {
+      grid-column: span 2;
+      background: var(--accent);
+      color: var(--text);
+    }
+    &:nth-of-type(2) {
+      grid-column: span 1;
+      background: var(--teal);
+      color: var(--white);
+    }
+    &:nth-of-type(3) {
+      grid-column: span 3;
+      background: var(--white);
+      color: var(--text);
+      height: 4.5rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  .btnYellow {
+    grid-column: span 2;
+  }
+  .btnWhite {
+    grid-column: span 3;
+  }
+}
+
 .detailsGrid {
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
 }
@@ -359,6 +413,10 @@ nav {
     color: var(--teal);
     font-size: 2rem;
   }
+}
+
+.itemWide {
+  grid-column: span 2;
 }
 
 .detailsGridText {

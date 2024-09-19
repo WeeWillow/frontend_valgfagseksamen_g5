@@ -66,12 +66,15 @@ footerElement.innerHTML = footerContent;
 // filter
 // choose cat or dog
 function selectAnimal(animal) {
+  // get classes
   const dogBtn = document.getElementById('dogBtn');
   const catBtn = document.getElementById('catBtn');
 
+  // if dog selected add active to dog, remove from cat
   if (animal === 'dog') {
     dogBtn.classList.add('active');
     catBtn.classList.remove('active');
+    // opposite, if cat then not dog :) 
   } else if (animal === 'cat') {
     catBtn.classList.add('active');
     dogBtn.classList.remove('active');
