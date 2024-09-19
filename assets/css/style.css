@@ -578,6 +578,45 @@ nav {
 /* adoption slut */
 
 /* forside start */
+.focusEntryPoints {
+  justify-content: space-between;
+}
+
+.entryPoint {
+  position: relative;
+  background: red;
+  width: 25vw;
+  height: 15vh;
+  border-radius: 10px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+  }
+
+  i {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--white);
+    font-size: 2.5rem;
+  }
+  p {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: "open sans", sans-serif;
+    color: var(--white);
+    font-weight: 900;
+    font-size: 1.2rem;
+  }
+}
+
 .mission {
   width: 70ch;
   text-align: center;
