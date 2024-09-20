@@ -70,6 +70,7 @@ main {
 footer {
   padding: 1rem 0;
   margin: 0 5vw 4vh 5vw;
+  justify-content: space-between;
 }
 
 a.btnSupport {
@@ -359,6 +360,13 @@ nav {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.18s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+      border: 2px solid var(--teal);
+    }
 
     &:nth-of-type(1) {
       grid-column: span 2;
@@ -716,9 +724,8 @@ nav {
 
 .entryPoint {
   position: relative;
-  background: red;
   width: 25vw;
-  height: 15vh;
+  height: 20vh;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.18s ease-in-out;
@@ -811,22 +818,46 @@ nav {
   text-align: center;
 }
 
-/* dyrepension */
+/* Træningcards */
 
-.rumMuligheder {
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
+
+.hundeTræningCards {
   margin: 1rem 0;
-}
-
-.roomOption {
-  label {
-    margin-right: 0;
+  max-height: 100%;
+  max-width: 100%;
+  background-color: var(--salmon50);
+  text-align: center;
+  overflow: hidden;
+  img {
+    border-radius: 5px 5px 0 0;
+    height: 40%;
+    width: 100%;
+    object-fit: cover;
   }
 }
+
+.hundeTræningCards img {
+  max-width: 100%;
+}
+
+.hundeTræningCardsIcons i {
+  padding: 2rem;
+}
+
+/* ekstra class til card button */
+button.hundeTræningCardsBtn {
+  padding: 1rem;
+  border: 0;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  text-align: center;
+}
+
+/* dyrepension */
 
 .dyrepensionContent {
   display: grid;
@@ -840,6 +871,21 @@ nav {
     width: 70ch;
     list-style-type: disc;
     margin-bottom: 0.5rem;
+  }
+}
+
+.rumMuligheder {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.roomOption {
+  label {
+    margin-right: 0;
   }
 }
 
@@ -886,7 +932,6 @@ nav {
 }
 
 /* Træning */
-
 /* Træning top section*/
 .TopSectionTraining {
   display: grid;
@@ -903,123 +948,7 @@ nav {
   padding-bottom: 1rem;
 }
 
-/* note to self - grid-row 1/span 2 får billede til at position sig i de samme rows som text. text-align: self sætter image til at være i top.*/
-.træning_billed {
-  grid-column: 2/2;
-  grid-row: 1 / span 2;
-  align-self: start;
-}
-
-/* Træningcards */
-.hundeTræningCardSection {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.hundeTræningCards {
-  margin: 1rem 0;
-  max-height: 100%;
-  max-width: 100%;
-  background-color: var(--salmon50);
-  text-align: center;
-  overflow: hidden;
-  img {
-    border-radius: 5px 5px 0 0;
-    height: 40%;
-    width: 100%;
-    object-fit: cover;
-  }
-}
-
-.hundeTræningCards img {
-  max-width: 100%;
-}
-
-.hundeTræningCardsIcons i {
-  padding: 2rem;
-}
-
-/* ekstra class til card button */
-button.hundeTræningCardsBtn {
-  padding: 1rem;
-  border: 0;
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.heroTitle {
-  text-align: center;
-}
-
-/* dyrepension */
-
-.dyrepensionContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.text-Content {
-  grid-column: 1/2;
-  margin: none;
-}
-
-.text-Content h2 p {
-  margin: 2rem;
-}
-
-.dyrepensionBilleder {
-  grid-column: 2/2;
-  row-gap: 20px;
-}
-
-.dyrepensionBilleder img {
-  margin-bottom: 4rem;
-}
-
-/* 2 sidde billeder */
-.dyrepensionImages {
-  max-width: 80%;
-  height: auto;
-}
-
-.betingelserSection {
-  background-color: var(--salmon);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-/* Sætter billeds størrelse */
-.betingelserBilleder img {
-  width: 100%;
-  height: 100%;
-}
-
-/* betingelser tekst området */
-.betingelserText {
-  font-size: large;
-}
-
-/* Træning */
-
-/* Træning top section*/
-.TopSectionTraining {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: start;
-}
-
-.textField {
-  grid-column: 1/2;
-  padding: 1rem;
-}
-
-.textField > h2 {
-  padding-bottom: 1rem;
-}
-
-/* note to self - grid-row 1/span 2 får billede til at position sig i de samme rows som text. text-align: self sætter image til at være i top.*/
+/* grid-row 1/span 2 får billede til at position sig i de samme rows som text. text-align: self sætter image til at være i top.*/
 .træning_billed {
   grid-column: 2/2;
   grid-row: 1 / span 2;
